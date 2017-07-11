@@ -1,0 +1,80 @@
+
+.topLayer_collapsible > h1 {
+    padding: 3rem;
+    display: block;
+    font-size: 3rem;
+    font-weight: 900;
+    vertical-align: middle;
+}
+
+#readDocList {
+    padding-bottom: 2rem;
+    display: block;
+    vertical-align: middle;
+}
+
+    #readDocList_pcDocButton,
+    #readDocList_mobileDocButton {
+        background: #2CC185;
+
+        margin: 0 0.5rem;
+        width: 7rem;
+        height: 7rem;
+        display: inline-block;
+        border: 1px solid #2CC185;
+        border-radius: 50%;
+
+        padding: 1rem;
+        background: #A3D1D1;
+        border-radius: 3rem;
+        box-shadow: 4px 4px 5px 0 rgba(0, 0, 0, 0.14),
+                    2px 2px 9px 1px rgba(0, 0, 0, 0.12),
+                    4px 4px 2px -2px rgba(0, 0, 0, 0.2);
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: 3rem;
+        line-height: 5rem;
+        color: #EEE;
+        transition: width 0.4s,
+                    padding 0.4s,
+                    border-radius 0.4s 0.1s;
+    }
+
+    #readDocList_pcDocButton::before,
+    #readDocList_mobileDocButton::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        display: block;
+        background-image: url("../icon/pc_mobile_icon.svg");
+        background-repeat: no-repeat;
+    }
+
+    #readDocList_pcDocButton::before {
+        background-position: 0% 0%;
+        background-size: 200% 100%;
+    }
+
+    #readDocList_mobileDocButton::before {
+        background-position: 100% 0%;
+        background-size: 200% 100%;
+    }
+
+    #readDocList.onPCDoc > #readDocList_pcDocButton,
+    #readDocList.onMobileDoc > #readDocList_mobileDocButton {
+        width: 14rem;
+        padding: 1rem 4.5rem;
+        background: #5CADAD;
+        border-radius: 1rem;
+    }
+
+    @media (min-width: 600px) {
+        .topLayer_collapsible > h1 {
+            display: inline-block;
+        }
+
+        #readDocList {
+            display: inline-block;
+            padding-bottom: 0;
+        }
+    }
+
