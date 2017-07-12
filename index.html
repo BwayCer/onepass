@@ -7,7 +7,8 @@
     <title>單密碼通行 OnePass</title>
 
     <link rel="manifest" href="manifest.json">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" sizes="32x32" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#FFD306">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -27,12 +28,80 @@
         <div class="topLayer_collapsible">
             <h1>安裝教學</h1>
 
-            <nav id="readDocList" class="onPCDoc">
+            <nav id="readDocList">
                 <i id="readDocList_pcDocButton"></i>
                 <i id="readDocList_mobileDocButton"></i>
             </nav>
         </div>
     </header>
+
+    <main id="tagMain">
+        <div id="installDoc_pc">
+            <h1 class="material">電腦版</h1>
+
+            <div class="material">
+                １．依下圖方式點選「加到桌面」。<br />
+                <br />
+
+                <img data-lazyload-src="./image/pwapp_install/pwapp_install_desktop_1.png" />
+            </div>
+
+            <div class="material">
+                ２．勾選「在視窗開啟」， 然後點選「新增」就完成安裝囉。<br />
+                <br />
+
+                <img data-lazyload-src="./image/pwapp_install/pwapp_install_desktop_2.png" />
+            </div>
+
+            <div class="material">
+                ３．恭喜你完成安裝。
+                回到桌面是否發現了我們的啟動快捷鍵呢？ 趕快來用看看吧！<br />
+                <br />
+
+                <img data-lazyload-src="./image/pwapp_install/pwapp_install_desktop_3.png" />
+
+                <br />
+
+                <img data-lazyload-src="./image/pwapp_install/pwapp_install_desktop_4.png" />
+            </div>
+        </div>
+
+        <div id="installDoc_mobile">
+            <h1 class="material">手機版</h1>
+
+            <div class="material">
+                １．如果是第一次拜訪我們， 瀏覽器會主動把訊息提供給你，
+                直接點選「新增」完成安裝。<br />
+                <br />
+
+                <img data-lazyload-src="./image/pwapp_install/pwapp_install_mobile_1.png" />
+            </div>
+
+            <div class="material">
+                ２．如果瀏覽器沒有提示， 也能透過手動安裝，
+                依下圖方式點選「加到主畫面」。<br />
+                <br />
+                <br />
+
+                <img data-lazyload-src="./image/pwapp_install/pwapp_install_mobile_2.png" />
+            </div>
+
+            <div class="material">
+                ３．點選「新增」就完成安裝囉。<br />
+                <br />
+
+                <img data-lazyload-src="./image/pwapp_install/pwapp_install_mobile_3.png" />
+            </div>
+
+            <div class="material">
+                ４．恭喜你完成安裝。
+                回到主畫面是否發現了我們的啟動快捷鍵呢？ 趕快來用看看吧！<br />
+                <br />
+
+                <img data-lazyload-src="./image/pwapp_install/pwapp_install_mobile_4.png" />
+            </div>
+        </div>
+    </main>
 
     <script src="./js/app.js" async></script>
     <script src="./js/homepage.js" async></script>

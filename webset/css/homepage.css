@@ -59,8 +59,8 @@
         background-size: 200% 100%;
     }
 
-    #readDocList.onPCDoc > #readDocList_pcDocButton,
-    #readDocList.onMobileDoc > #readDocList_mobileDocButton {
+    body.onPCDoc #readDocList_pcDocButton,
+    body.onMobileDoc #readDocList_mobileDocButton {
         width: 14rem;
         padding: 1rem 4.5rem;
         background: #5CADAD;
@@ -75,6 +75,121 @@
         #readDocList {
             display: inline-block;
             padding-bottom: 0;
+        }
+    }
+
+#tagMain {
+    width: 100%;
+    position: relative;
+    font-size: 3rem;
+    line-height: 3rem;
+}
+
+.material {
+    margin: 2rem;
+    padding: 2rem;
+    background: #D1D1DE;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+                0 2px 9px 1px rgba(0, 0, 0, 0.12),
+                0 4px 2px -2px rgba(0, 0, 0, 0.2);
+}
+
+#tagMain img {
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 60rem;
+    border: 1px solid #AAA;
+    display: block;
+}
+
+#installDoc_pc,
+#installDoc_mobile {
+    width: 100%;
+    height: 0;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    animation-duration: 0.4s;
+}
+
+#installDoc_pc {
+    left: -50%;
+}
+
+#installDoc_mobile {
+    left: 50%;
+}
+
+    @media (max-width: 600px) {
+        #installDoc_pc,
+        #installDoc_mobile {
+            animation-duration: 0.2s;
+        }
+    }
+
+    body.onPCDoc #installDoc_pc {
+        height: initial;
+        left: 0;
+        animation-name: modeSwitch_docPC_onPCDoc;
+    }
+
+    body.onMobileDoc #installDoc_pc {
+        left: -100%;
+        animation-name: modeSwitch_docPC_onMobileDoc;
+    }
+
+    body.onPCDoc #installDoc_mobile {
+        left: 100%;
+        animation-name: modeSwitch_docMobile_onPCDoc;
+    }
+
+    body.onMobileDoc #installDoc_mobile {
+        height: initial;
+        left: 0;
+        animation-name: modeSwitch_docMobile_onMobileDoc;
+    }
+
+    @keyframes modeSwitch_docPC_onPCDoc {
+        from {
+            height: initial;
+            left: -100%;
+        }
+        to {
+            height: initial;
+            left: 0;
+        }
+    }
+
+    @keyframes modeSwitch_docPC_onMobileDoc {
+        from {
+            height: initial;
+            left: 0;
+        }
+        to {
+            height: initial;
+            left: -100%;
+        }
+    }
+
+    @keyframes modeSwitch_docMobile_onPCDoc {
+        from {
+            height: initial;
+            left: 0;
+        }
+        to {
+            height: initial;
+            left: 100%;
+        }
+    }
+
+    @keyframes modeSwitch_docMobile_onMobileDoc {
+        from {
+            height: initial;
+            left: 100%;
+        }
+        to {
+            height: initial;
+            left: 0;
         }
     }
 
