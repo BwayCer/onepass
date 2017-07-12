@@ -13,7 +13,7 @@ html, body {
     font-weight: 400;
     font-family: 'Helvetica', 'Verdana', sans-serif;
     font-display: optional;
-    color: #444;
+    color: #000;
 }
 
 body {
@@ -32,7 +32,7 @@ body {
     box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
                 0 2px 9px 1px rgba(0, 0, 0, 0.12),
                 0 4px 2px -2px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
+    z-index: 890;
 }
 
     .topLayer.onFixed {
@@ -53,6 +53,7 @@ body {
         background: #FFD306;
         font-size: 20px;
         color: #808040;
+        z-index: 891;
     }
 
     .topLayer.onFixed > .topLayer_banner {
